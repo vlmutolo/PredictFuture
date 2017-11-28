@@ -1,7 +1,7 @@
 # How to (Probably) Predict the Future
 
 ## What This Is
-
+Demetri, you're gonna have to answer this one.
 
 
 ## Style Guide
@@ -19,7 +19,7 @@
 
 
 ## Contributors
-Demetrios Papakostas
-Vince Mutolo
-Joseph Michail
-Riles McGuiles
+- Demetrios Papakostas
+- Vince Mutolo
+- Joseph Michail
+- Riles McGuiles
