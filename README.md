@@ -3,7 +3,6 @@
 ## What This Is
 Demetri, you're gonna have to answer this one.
 
-
 ## Style Guide
 
 ### General
@@ -12,6 +11,10 @@ Demetri, you're gonna have to answer this one.
 ### Chapters
 - Every chapter should be written in a _separate_ `.tex` file, and it should be located within its own folder.
 - Chapter names _should not_ have numbers in them. This book is not written linearly and it should be possible to move chapters around arbitrarily.
+
+### Images
+- Images would preferably be `eps`, `pdf`, or be drawn with the `tikz` package.
+- All images **must** be located in the main images folder.
 
 
 ### Citations

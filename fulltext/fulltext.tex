@@ -9,11 +9,16 @@
 \usepackage{fouriernc}
 \usepackage[utf8]{inputenc}
 
+% For colors (this has to be defined near the top b/c it doesn't play well with other packages.)
+\usepackage[dvipsnames]{xcolor}
+\definecolor{codebg}{rgb}{0.94,0.94,0.94}
+\definecolor{outbg}{rgb}{0.90,0.90,0.95}
+
+% Intelligently typeset quotation marks
+\usepackage{csquotes}
+
 % Chapter quotes
 \usepackage{quotchap}
-
-% Create an index. In order to use this command, it is possible that the execution of fulltex.tex may have to use a --shell-escape.
-\usepackage{imakeidx}
 
 % Define the heading on top of each page
 \usepackage{fancyhdr}
@@ -25,25 +30,30 @@
 
 % Graphics package
 \usepackage{graphicx}
+\graphicspath{{../images/}{../../images/}}
 
 % Some nice math packages
 \usepackage{amsmath, physics, amssymb, amsthm}
 
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem*{claim}{Claim}
 
+% Fine tuned control over title page
 \usepackage{titling}
-%\setlength{\columnsep}{1 cm}
 
 % Package to typeset units in a more consistent and nicer way.
 \usepackage{siunitx}
 
-
+% Create an index. In order to use this command, it is possible that the execution of fulltex.tex may have to use a --shell-escape.
+\usepackage{imakeidx}
 \makeindex[columns=2, title=Alphabetical Index]
+
+% Allow for per-file compilation
+\usepackage{subfiles}
 
 % Global Command Definitions
 % --------------------------
-% THESE ARE FROWNED UPON. USE ONLY IF IT IS NECESSARY FOR THE ENTIRE BOOK.
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem*{claim}{Claim}
+
 
 \begin{document}
 	\pretitle{%
@@ -61,5 +71,12 @@
 	\maketitle
 	
 	\tableofcontents
+
+	\subfile{../chapters/introduction/introduction.tex}
+
+	\subfile{../chapters/differential_privacy/differential_privacy.tex}
+
+	\subfile{../chapters/quantum_mechanics/quantum_mechanics.tex}
+
 
 \end{document}
